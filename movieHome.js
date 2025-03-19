@@ -25,13 +25,16 @@ document.addEventListener('DOMContentLoaded', function(){
                 
                 let popupDiv = document.getElementById('popupDiv');
                 let closePopup = document.getElementById('closePopup');
-                let popFlag = false;
+                
+                // generChange(element.genre_ids)
+
 
                 movieContainer.addEventListener("click",()=>{
                     popupDiv.style.display = "block";
                     popupDiv.innerHTML +=`
                     <img src=${element.poster_path}></img>
-                    <h1>${element.title}</h1>
+                    <h5>${element.title}</h5>
+                    <p>${element.vote_average}</p>
                     `
                     removePopDiv()
                 })
@@ -49,3 +52,21 @@ function removePopDiv(){
         popupDiv.style.display = "none";
      })
 }
+
+
+// function genreChange(genreArr){
+//     genreArr = {
+//         12: adventure,
+//         14: fantasy,
+//         18: drama,
+//         28: action,
+//         35: comdey,
+//         36: history,
+//         53: thriller,
+//         80: crime,
+//         10751: family,
+//         10749: romance
+//     }
+//     console.log(this.comdey);
+    
+// }
