@@ -1,107 +1,120 @@
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body{
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  width: 100%;
-  background: #161b22;
-}
-.container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  max-width: 430px;
-  width: 100%;
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-.container .form{
-  padding: 2rem;
-}
-.form header{
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.box{
-  padding: 10px;
-}
-.form input{
-  height: 60px;
+/* Container */
+.container {
   width: 100%;
-  font-size: 17px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  max-width: 400px;
+  background: #161b22;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Header */
+header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #58a6ff;
+  margin-bottom: 15px;
+}
+
+/* Form Box */
+.box {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Input Fields */
+.box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #58a6ff;
+  background: #0d1117;
+  color: #e6edf3;
+  font-size: 1rem;
   outline: none;
- }
-.form input:focus{
-  box-shadow: 0 1px 0 rgba(0,0,0,0);
-}
-.form a{
-  font-size: 16px;
-  color: #009579;
-  text-decoration: none;
-}
-.form a:hover{
-  text-decoration: underline;
-}
-.form input.button{
-  color: #fff;
-  background: #161b22;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.form input.button:hover{
-  background: #161b22;
-}
-.signup{
-  font-size: 17px;
-  text-align: center;
-}
-.signup label{
-  color: #161b22;
-  cursor: pointer;
-}
-.signup label:hover{
-  text-decoration: underline;
+  transition: 0.3s;
 }
 
+.box input::placeholder {
+  color: #8b949e;
+}
 
-/* Default hidden alert */
-.alert-message {
-  display: none;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 4px;
+.box input:focus {
+  border-color: #1f6feb;
+}
+
+/* Error and Success Messages */
+.alertMessage, .alertMessageinputname {
+  font-size: 0.9rem;
   margin-top: 5px;
+  text-align: left;
+  display: none;
 }
 
-/* Error state */
-.input-value .error-message {
-  display: block;
-  color: #d9534f;
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
+/* Error Styling */
+.error-message {
+  color: #ff4d4d;
 }
 
-/* Success state */
-.input-value .success-message {
-  display: block;
-  color: #155724;
-  background: #d4edda;
-  border: 1px solid #c3e6cb;
+.box input.error {
+  border: 1px solid #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+  animation: shake 0.3s ease-in-out;
 }
 
+/* Success Styling */
+.success-message {
+  color: #4caf50;
+}
+
+.box input.success {
+  border: 1px solid #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f6feb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #185abc;
+}
+
+/* Signup Link */
+.signup {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.signup a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}

@@ -19,25 +19,32 @@ document.addEventListener('DOMContentLoaded', function(){
                 let movieTitle = document.createElement('p');
                 movieTitle.innerText = element.original_title;
                 movieContainer.append(movieTitle);
-                let movieVoteAverage = document.createElement('small');
+                let movieVoteAverage = document.createElement('p');
                 movieVoteAverage.innerText = element.vote_average;
                 movieContainer.append(movieVoteAverage);
+                let movieCertifcate = document.createElement('p')
+                movieCertifcate.innerText = "18+";
+                movieContainer.append(movieCertifcate);
                 
-                let popupDiv = document.getElementById('popupDiv');
-                let closePopup = document.getElementById('closePopup');
+
+                
+                // let popupDiv = document.getElementById('popupDiv');
+                // let closePopup = document.getElementById('closePopup');
                 
                 // generChange(element.genre_ids)
 
 
-                movieContainer.addEventListener("click",()=>{
-                    popupDiv.style.display = "block";
-                    popupDiv.innerHTML +=`
-                    <img src=${element.poster_path}></img>
-                    <h5>${element.title}</h5>
-                    <p>${element.vote_average}</p>
-                    `
-                    removePopDiv()
-                })
+                // movieContainer.addEventListener("click",()=>{
+                //     popupDiv.style.display = "block";
+                //     popupDiv.innerHTML +=`
+                //     <img src=${element.poster_path}></img>
+                //     <h5>${element.title}</h5>
+                //     <p>${element.vote_average}</p>
+                //     <p>
+                //     `
+                //     removePopDiv()
+                    
+                // })
             });
         }
     }
@@ -46,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-function removePopDiv(){
-    closePopup.addEventListener("click", ()=>{
-        popupDiv.innerText=""
-        popupDiv.style.display = "none";
-     })
-}
+// function removePopDiv(){
+//     closePopup.addEventListener("click", ()=>{
+//         popupDiv.innerText=""
+//         popupDiv.style.display = "none";
+//      })
+// }
 
 
 // function genreChange(genreArr){
