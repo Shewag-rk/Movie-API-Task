@@ -1,66 +1,117 @@
-/* * {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #121212;
-    color: white;
-    padding: 20px;
+/* Navigation Bar Styles */
+.navItem {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Space between username and search box */
+    align-items: center; /* Center items vertically */
+    position: fixed;
+    width: 100%;
+    gap: 10px;
+}
+
+.userName {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Font size for username */
+}
+
+/* Search Box Styles */
+.search-container {
+    display: flex; /* Flexbox for search box */
+}
+
+#searchBox{
+    width: 300px; /* Set a fixed width for the search box */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ddd; /* Border for the search box */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+#searchBox:focus {
+    outline: none; /* Remove default outline */
+    border-color: #fff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Shadow on focus */
+}
+
+/* Movie List Styles */
+.movieLists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Space between grid items */
+    padding: 80px 20px 20px; /* Add padding to avoid overlap with nav */
 }
 
 .movieGrid {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    overflow: hidden; /* Prevents overflow of content */
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column; /* Stack children vertically */
 }
 
-.movieCard {
-    width: 200px;
-    background: #1e1e1e;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.movieCard:hover {
+.movieGrid:hover {
     transform: scale(1.05);
 }
 
-.movieCard img {
+.movieGrid img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 300px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 .movieInfo {
-    display: flex;
-    justify-content: space-between;
     padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    justify-content: space-between; /* Evenly distribute space */
+    flex-grow: 1; /* Allow this section to grow and fill available space */
 }
 
-.leftInfo .title {
+.leftInfo {
     font-size: 14px;
-    font-weight: bold;
-    color: #ffcc00;
+    color: #333;
 }
 
-.leftInfo .lang {
-    font-size: 12px;
-    color: #bbb;
-}
-
-.leftInfo .popularity {
-    font-size: 12px;
-    color: #ff4d4d;
-}
-
-.rightInfo .rating {
+.rightInfo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     font-size: 14px;
-    font-weight: bold;
-    color: #00ffcc;
-} */
+    color: #666;
+}
+/* Add Movies Button Styles */
+.addMoviesBtn {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-left: 20px; /* Space between username and button */
+}
+
+.addMoviesBtn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.addMoviesBtn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Shadow on focus */
+}

@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login Page</title>
-  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
   <div class="container">
     <div class="login form">
       <header>Login</header>
-      <form action="#">
+      <form id="loginForm" action="moviesHome.html">
         <div class="box">
-          <input type="text" placeholder="Enter your username" required>
+          <input type="text" placeholder="Enter your username" id="username" required>
           <div class="error"></div>
         </div>
         <div class="box">
-          <input type="email" placeholder="Enter your email" required>
+          <input type="email" placeholder="Enter your email" id="useremail" required>
           <div class="alert alertEmail success"></div>
         </div>
-        <i href="moviesHome.html"><input type="button" class="button" value="Login"></i>
+          <input id="loginbtn" type="button" class="button" onclick="login()" value="Login">
       </form>
       <div class="signup">
         <span class="signup">Don't have an account?

@@ -1,6 +1,7 @@
 // function for calling movies API in frontend:
 function movieListFromAPI(){
     const movieListDiv = document.querySelector(".movieLists")
+    const navItem =  document.querySelector('.navItem');
     // console.log(movieListDiv);
     const movies = new XMLHttpRequest();
     movies.open("GET", "https://mimic-server-api.vercel.app/movies");
@@ -29,6 +30,7 @@ function movieListFromAPI(){
                     <p>${item.original_title}</p>
                     <p>Tamil</p>
                     <p>${item.popularity}</p>
+                    <p>${item.adult}</p>
                     </div>
                 </div>
                 <div class="rightInfo">
@@ -37,9 +39,20 @@ function movieListFromAPI(){
                 </div>
                 </div>
                 `
+                const usernameDisplay = JSON.parse(window.localStorage.getItem('userValues'));
+                usernameDisplay.forEach(item =>{
+                // console.log(item.userID);
+                    navItem.innerHTML =`
+                    <input type="text" id="searchBox" placeholder="Search for movies...">
+                    <p>Hello ${item.userName}</p>
+                    <button class="addMoviesBtn">Add Movie</button>
+                    `
+                })
+
             });
         }
     }
     movies.send();
 }
 movieListFromAPI()
+

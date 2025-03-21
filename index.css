@@ -1,104 +1,99 @@
-/* body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background color */
   margin: 0;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
 }
+
+/* Container Styles */
 .container {
-  width: 100%;
-  max-width: 400px;
-  background: #161b22;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  height: 100vh; /* Full viewport height */
 }
+
+/* Form Styles */
+.form {
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the form */
+  width: 300px; /* Fixed width for the form */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Header Styles */
 header {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #58a6ff;
-  margin-bottom: 15px;
+  font-size: 24px; /* Header font size */
+  text-align: center; /* Center the header text */
+  margin-bottom: 20px; /* Space below the header */
+  color: #333; /* Dark text color */
 }
+
+/* Input Box Styles */
 .box {
-  margin-bottom: 15px;
-  position: relative;
-}
-.box input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #58a6ff;
-  background: #0d1117;
-  color: #e6edf3;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
+  margin-bottom: 15px; /* Space between input fields */
 }
 
-.box input::placeholder {
-  color: #8b949e;
+input[type="text"],
+input[type="email"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
-.box input:focus {
-  border-color: #1f6feb;
-}
-.alertMessage, .alertMessageinputname {
-  font-size: 0.9rem;
-  margin-top: 5px;
-  text-align: left;
-  display: none;
-}
-.error-message {
-  color: #ff4d4d;
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #28a745; /* Change border color on focus */
+  outline: none; /* Remove default outline */
 }
 
-.box input.error {
-  border: 1px solid #ff4d4d;
-  background: rgba(255, 77, 77, 0.1);
-  animation: shake 0.3s ease-in-out;
-}
-
-.success-message {
-  color: #4caf50;
-}
-
-.box input.success {
-  border: 1px solid #4caf50;
-  background: rgba(76, 175, 80, 0.1);
-}
+/* Button Styles */
 .button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: #1f6feb;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+  background-color: #28a745; /* Green background */
+  color: #fff; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 100%; /* Full width */
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 .button:hover {
-  background: #185abc;
+  background-color: #218838; /* Darker green on hover */
 }
 
+/* Signup Link Styles */
 .signup {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #8b949e;
+  text-align: center; /* Center the signup text */
+  margin-top: 15px; /* Space above the signup text */
 }
 
 .signup a {
-  color: #58a6ff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
 }
 
 .signup a:hover {
-  text-decoration: underline;
-} */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Error and Alert Styles */
+.error,
+.alert {
+  color: red; /* Red color for error messages */
+  font-size: 12px; /* Smaller font size for error messages */
+  margin-top: 5px; /* Space above error messages */
+}
+
+.alert.success {
+  color: green; /* Green color for success messages */
+}
